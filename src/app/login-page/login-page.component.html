@@ -1,0 +1,16 @@
+<div class="container-fluide login">
+    <div class="logo">
+        <img src="assets/img/logo.png" alt="logo">
+    </div>
+    <div class="row card_section">
+        <div class="card_login">
+            <div *ngIf="authenticationService.login ;else register" class="w-100">
+                <app-login class="w-100"></app-login>
+            </div>
+            <ng-template #register>
+                <app-registr class="w-100"></app-registr>
+            </ng-template>
+        </div>
+
+    </div>
+</div>

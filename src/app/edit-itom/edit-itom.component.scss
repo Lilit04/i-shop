@@ -1,0 +1,127 @@
+@import '../../assets/variable.scss';
+
+
+.modalNew {
+    width: 20rem;
+    background-color: #29353F;
+    border-radius: .7rem;
+    overflow: hidden;
+
+    .modalTitle {
+        display: flex;
+        background-color: #2F3B45;
+        justify-content: space-between;
+        padding: .5rem;
+
+        .title {
+            color: $white;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+
+            p {
+                margin: 0;
+                font-size: 1.2rem;
+                font-weight: 600;
+                padding-left: .8rem;
+            }
+        }
+
+        .cloase {
+            width: 1rem;
+            height: 1rem;
+            background-color: #39454E;
+            font-size: .7rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: .7rem;
+            border-radius: .3rem;
+        }
+    }
+
+    .modalContent {
+        background-color: $Editbg;
+        padding: 1.5rem;
+
+        form {
+            width: 100%;
+
+            .form_row {
+                display: flex;
+                flex-direction: column;
+
+                .select_block {
+                    position: relative;
+                    width: 100%;
+
+                    select {
+                        background-color: $inputBg;
+                        color: $labelColor;
+                        padding: .5rem;
+                        border: none;
+                        outline: none;
+                        border-radius: .3rem;
+                        font-size: .8rem;
+                        width: 100%;
+                    }
+
+                    .arrow {
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        transform: translate(-20%, -50%);
+                        width: 1rem;
+                        height: 1rem;
+                        background-color: $inputBg;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        span {
+                            color: $labelColor;
+                            transform: rotate(90deg);
+                        }
+
+                    }
+                }
+
+                label {
+                    color: $labelColor;
+                    padding: .5rem 0;
+                    font-size: .8rem;
+                }
+
+                input,
+                textarea {
+                    background-color: $inputBg;
+                    border: none;
+                    outline: none;
+                    padding: .3rem 0 .3rem .5rem;
+                    border-radius: .3rem;
+                    color: $labelColor;
+                    font-size: .8rem;
+                    color: $labelColor;
+                    margin-bottom: 1rem;
+                }
+
+                button {
+                    padding: .3rem;
+                    background-color: $btnBg;
+                    color: $inputBg;
+                    border-radius: .3rem;
+                    border: 1px solid $btnBg;
+                    transition: all .3s ease;
+                    font-size: .8rem;
+                    margin-top: 1.5rem;
+                    font-weight: 600;
+
+                    &:hover {
+                        background-color: transparent;
+                        color: $btnBg ;
+                    }
+                }
+            }
+        }
+    }
+}

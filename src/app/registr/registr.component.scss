@@ -1,0 +1,61 @@
+@import '../../assets/variable.scss';
+
+.card_title{
+    display: flex;
+    justify-content: center;
+    color: $white;
+}
+form{
+    width: 100%;   
+    .form_row{
+        display: flex;
+        flex-direction: column;
+        label{
+            color: $labelColor;
+            padding: .5rem 0;
+            font-size: .8rem;
+        }
+        input{
+            background-color: $inputBg;
+            border: none;
+            outline: none;
+            padding: .3rem;
+            border-radius: .3rem;
+            color: $labelColor;
+            font-size: .8rem;
+            color:$labelColor;
+        }
+        button{
+            padding: .3rem;
+            background-color: $btnBg;
+            color: $inputBg;
+            border-radius: .3rem;
+            border: 1px solid $btnBg;
+            transition: all .3s ease;
+            font-size: .8rem;
+            margin-top: 1.5rem;
+            font-weight: 600;
+            &:hover{
+                background-color: transparent;
+                color: $btnBg ;
+            }
+        }
+    }
+    .passwor_icon{
+        position: relative;
+        .icon{
+            width: 1rem;
+            height: 1rem;
+            position: absolute;
+            right: 0;
+            top: 69%;
+            transform: translate(-50%,-50%);
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                cursor: pointer;
+            }
+        }
+    }
+}

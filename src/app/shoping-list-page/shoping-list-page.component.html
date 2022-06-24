@@ -1,0 +1,44 @@
+<div class="container-fluid shoping">
+    <div class="content">
+        <app-nav class="w-100"></app-nav>
+        <div class="shopingContent">
+            <div class="shopingContent_Menu">
+                <div class="category">
+                    <h2>Shopping list</h2>
+                    <div class="select_block">
+                        <select name="category" (change)="onChange($event)">
+                            <option>All Category</option>
+                            <option *ngFor="let cat of category">{{cat?.name}}</option>
+                        </select>
+                        <div class="arrow">
+                            <span>›</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="addItem" (click)="showModal()">
+                    <button>Add item</button>
+                </div>
+            </div>
+            <div class="shoping_list">
+                <div class="shoping_row" *ngFor="let it of filterData">
+                    <div class="info">
+                        <span>{{it?.ctname}}</span>
+                        <h6>{{it?.name}}</h6>
+                        <p>{{it?.description}}</p>
+                    </div>
+                    <div class="del_edit">
+                        <div class="edit" (click)="showEditModal(it)">
+                            <img src="assets/img/Pencil.svg" alt="edit">
+                        </div>
+                        <div class="del" (click)="onDelete(it?._id)">
+                            <img src="assets/img/recycle.svg" alt="del">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-add-item class="addItemModal" *ngIf="show" (addnewData)="updateData()"  (hideModale)="showModal()" [category]="category"></app-add-item>
+    <app-edit-itom class="addItemModal" *ngIf="editShow"   (hideModale)="showEdit()" [category]="category" [editingItem]="editingItem"></app-edit-itom>
+
+</div>

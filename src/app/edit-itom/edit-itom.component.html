@@ -1,0 +1,36 @@
+<div class="modalNew">
+    <div class="modalTitle">
+        <div class="title">
+            <p>Edit item</p>
+        </div>
+        <div class="cloase" (click)="hide()">
+            ✖
+        </div>
+    </div>
+    <div class="modalContent">
+        <form class="form" [formGroup]="addnewitem">
+            <div class="form_row">
+                <label for="name">Category</label>
+                <div class="select_block" >
+                    <select name="category"formControlName="categoty">
+                        <option  *ngFor="let cat of category" [selected] = "cat.name == editingItem.ctname ">{{cat.name}}</option>
+                    </select>
+                    <div class="arrow">
+                        <span>›</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form_row">
+                <label for="name">Name</label>
+                <input name="name" id="name" type="text" formControlName="name" placeholder="Enter your product name">
+            </div>
+            <div class="form_row">
+                <label for="name">Description</label>
+                <textarea formControlName="description" name="description" id="description"></textarea>
+            </div>
+            <div class="form_row">
+                <button (click)="onClick()">Save</button>
+            </div>
+        </form>
+    </div>
+</div>

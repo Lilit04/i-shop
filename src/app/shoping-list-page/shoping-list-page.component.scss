@@ -1,0 +1,153 @@
+@import '../../assets/variable.scss';
+
+.shoping {
+    background-color: $bgcolor;
+    min-height: 100vh;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    .content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .shopingContent {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+
+            .shopingContent_Menu {
+                display: flex;
+                justify-content: space-between;
+                margin: 1.5rem 0;
+
+                .category {
+                    display: flex;
+                    align-items: center;
+
+                    h2 {
+                        color: $white ;
+                        margin-right: 1rem;
+                    }
+
+                    .select_block {
+                        position: relative;
+
+                        select {
+                            background-color: $navBg;
+                            color: $white;
+                            padding: .5rem;
+                            border: none;
+                            outline: none;
+                            border-radius: .3rem;
+                            font-size: .8rem;
+
+                        }
+
+                        .arrow {
+                            position: absolute;
+                            right: 0;
+                            top: 50%;
+                            transform: translate(-20%, -50%);
+                            width: 1rem;
+                            height: 1rem;
+                            background-color: $navBg;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            span {
+                                color: $labelColor;
+                                transform: rotate(90deg);
+                            }
+
+                        }
+                    }
+                }
+
+                .addItem {
+                    button {
+                        background-color: $btnBg;
+                        border: none;
+                        outline: none;
+                        padding: .3rem 1rem .3rem 1rem;
+                        font-weight: bold;
+                        font-size: .8rem;
+                        border: 1px solid $btnBg;
+                        border-radius: .3rem;
+                        transition: all .3s ease;
+
+                        &:hover {
+                            background-color: transparent;
+                            color: $btnBg;
+                        }
+                    }
+                }
+            }
+
+            .shoping_list {
+                .shoping_row {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    background-color: $navBg;
+                    margin: .2rem 0;
+                    border-radius: .3rem;
+                    padding: .7rem 1rem .7rem 1rem;
+
+                    .info {
+                        span {
+                            font-size: .7rem;
+                            color: $labelColor2;
+                            margin: 0;
+                        }
+
+                        h6 {
+                            color: $white;
+                            margin: 0;
+                        }
+
+                        p {
+                            color: $labelColor;
+                            margin: 0;
+                        }
+                    }
+
+                    .del_edit {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: .5rem;
+
+                        .del,
+                        .edit {
+                            width: 1rem;
+                            height: 1rem;
+                            margin: 0 .5rem;
+                            cursor: pointer;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .addItemModal {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(53, 53, 53, 0.482);
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

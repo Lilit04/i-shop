@@ -1,0 +1,20 @@
+<div class="card_title">
+    <h5>Complete your profile</h5>
+</div>
+<form class="form" [formGroup]="loginForm">
+    <div class="form_row">
+        <label for="firstname">First name</label>
+        <input name="firstname" id="firstname" type="text" formControlName="firstname" placeholder="Enter your first name">
+    </div>
+    <div class="form_row passwor_icon">
+        <label for="lastname">Last name</label>
+        <input name="lastname" id="lastname" type="text" formControlName="lastname" placeholder="Enter your last name">
+    </div>
+    <div class="form_row passwor_icon">
+        <label for="email">Email</label>
+        <input name="email" id="email" type="email" formControlName="email" placeholder="Enter your email">
+    </div>
+    <div class="form_row">
+        <button (click)="onClick()">Next</button>
+    </div>
+</form>

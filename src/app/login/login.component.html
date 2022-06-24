@@ -1,0 +1,19 @@
+<div class="card_title">
+    <h5>Welcome back</h5>
+</div>
+<form class="form" [formGroup]="loginForm">
+    <div class="form_row">
+        <label for="username">username</label>
+        <input name="username" id="username" type="text" formControlName="username" placeholder="Enter your username">
+    </div>
+    <div class="form_row passwor_icon">
+        <label for="password">password</label>
+        <input name="password" id="password" [type]="password" formControlName="password" placeholder="Enter your password">
+        <div class="icon" (click)="setshowpassword()">
+           <img src="assets/img/eye.svg" alt="logo">
+        </div>
+    </div>
+    <div class="form_row">
+        <button (click)="onClick()">Log in</button>
+    </div>
+</form>
